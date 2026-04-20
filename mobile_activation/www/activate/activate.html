@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activate Account</title>
+</head>
+<body>
+
+<h3>Activating your account...</h3>
+
+<script>
+    var code = new URLSearchParams(window.location.search).get("code");
+
+    var deepLink = "myerp://activate?code=" + code;
+    var apiUrl = "/api/method/mobile_activation.api.activate_user?code=" + code;
+
+    window.location = deepLink;
+
+    setTimeout(function() {
+        fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.message.status === "success") {
+                document.body.innerHTML = "<h2>Account Activated Successfully</h2><a href='/login'>Login Now</a>";
+            } else {
+                document.body.innerHTML = "<h2>Activation Failed</h2>";
+            }
+        });
+    }, 2000);
+</script>
+
+</body>
+</html>

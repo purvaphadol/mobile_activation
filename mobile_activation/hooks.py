@@ -213,3 +213,15 @@ app_license = "MIT"
 # auth_hooks = [
 # 	"mobile_activation.auth.validate"
 # ]
+
+# app_include_js = [
+#     "/assets/mobile_activation/js/push_notification.js"
+# ]
+
+# scheduler_events = {
+#     "cron": {
+#         "*/5 * * * *": [
+#             "mobile_activation.reminders.lead_followup_reminder.send_lead_followup_reminders"
+#         ]
+#     }
+# }

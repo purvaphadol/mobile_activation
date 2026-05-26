@@ -225,3 +225,11 @@ app_license = "MIT"
 #         ]
 #     }
 # }
+# Custom URL routes
+before_request = ["mobile_activation.mobile_activation.utils.whatsapp_before_request.whatsapp_before_request"]
+website_route_rules = [
+    {
+        "from_route": "/api/whatsapp/webhook",
+        "to_route": "mobile_activation.mobile_activation.api.whatsapp_webhook.whatsapp_webhook"
+    }
+]

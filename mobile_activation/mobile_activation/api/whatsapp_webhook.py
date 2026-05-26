@@ -6,8 +6,8 @@ from werkzeug.wrappers import Response as WerkzeugResponse
 
 
 VERIFY_TOKEN    = "glmmify_secret_token"
-WHATSAPP_TOKEN  = "EAAVZAHA4gkccBRiKXNDfui2zG47KZBsqUYZC6LKSCO8fO19YRSUFPObcI9PFjheoUP3GN3UZCF6ncCnZAk2G3dmOOYbOwwf64m5ThZA4oDQlyhRoCJLSfqLZAe3aTiuIVEWune9PZChGI0Rroz7A5cvgMo0ZA5cleRXIAjzkusVDrAjfF0ZAnL4BOyNeWbefZCAAAvlu9FHZCTkcPJoTKNmkMO4PtPLX0DYutZBsFdZBvhC4hGMeZCMMkzuyqNTgSkM5gScVI1R41eZBsBFbOFQJvNBtP1gtehIZD"
-PHONE_NUMBER_ID = "938048846067399"
+WHATSAPP_TOKEN  = "WHATSAPP_TOKEN"
+PHONE_NUMBER_ID = "PHONE_NUMBER_ID"
 
 @frappe.whitelist(allow_guest=True)
 def whatsapp_webhook(**kwargs):

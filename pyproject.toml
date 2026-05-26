@@ -18,3 +18,12 @@ build-backend = "flit_core.buildapi"
 # These dependencies are only installed when developer mode is enabled
 [tool.bench.dev-dependencies]
 # package_name = "~=1.1.0"
+
+[tool.pyrefly]
+search-path = [
+    ".",
+    "../../env/lib/python3.10/site-packages",
+    "../frappe",
+    "../erpnext"
+]
+

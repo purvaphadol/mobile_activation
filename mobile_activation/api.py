@@ -1,5 +1,8 @@
+# pyrefly: ignore [missing-import]
+# pyrefly: ignore-errors
 import frappe
 from frappe.utils import now_datetime
+
 
 @frappe.whitelist(allow_guest=True)
 def activate_user(code):
